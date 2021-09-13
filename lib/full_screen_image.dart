@@ -53,8 +53,8 @@ class FullScreenPage extends StatefulWidget {
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
       this.disposeLevel = DisposeLevel.Medium,
-      this.icon,
-      this.onTap});
+      required this.icon,
+     required this.onTap});
 
   final Widget child;
   final Color backgroundColor;
