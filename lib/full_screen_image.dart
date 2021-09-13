@@ -7,12 +7,14 @@ class FullScreenWidget extends StatelessWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel});
+      this.disposeLevel,
+      this.icon});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
+  final iconData icon;
 
   @override
   Widget build(BuildContext context) { 
@@ -169,11 +171,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 child: GestureDetector(
                   onTap: Navigator.pop(context),
                   child: Container(
-                    child: FaIcon(
-                      FontAwesomeIcons.times,
-                      color: Colors.grey[600],
-                      size: 18.0,
-                    ),
+                    child: icon,
                   ),
                 ),
               ),
