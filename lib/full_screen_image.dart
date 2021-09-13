@@ -171,7 +171,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 child: GestureDetector(
                   onTap: Navigator.pop(context),
                   child: Container(
-                    child: icon,
+                    child: widget.icon,
                   ),
                 ),
               ),
