@@ -169,6 +169,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 left: 0,
                 right: 0,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     widget.icon,
                   widget.child,
