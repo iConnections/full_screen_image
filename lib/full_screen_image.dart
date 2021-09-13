@@ -7,16 +7,12 @@ class FullScreenWidget extends StatelessWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel,
-      required this.icon,
-      required this.onTap});
+      this.disposeLevel});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget icon;
-  final Function onTap;
   
   @override
   Widget build(BuildContext context) { 
@@ -32,8 +28,6 @@ class FullScreenWidget extends StatelessWidget {
                 pageBuilder: (BuildContext context, _, __) {
                   return FullScreenPage(
                     child: child,
-                    icon: icon,
-                    onTap: onTap,
                     backgroundColor: backgroundColor,
                     backgroundIsTransparent: backgroundIsTransparent,
                     disposeLevel: disposeLevel,
@@ -52,16 +46,12 @@ class FullScreenPage extends StatefulWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel = DisposeLevel.Medium,
-      required this.icon,
-     required this.onTap});
+      this.disposeLevel = DisposeLevel.Medium});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget icon;
-  final Function onTap;
 
   @override
   _FullScreenPageState createState() => _FullScreenPageState();
@@ -175,7 +165,6 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 right: 0,
                 child: widget.child,
               ),
-        widget.icon
             ],
           ),
         ),
