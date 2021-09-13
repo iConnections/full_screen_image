@@ -164,7 +164,19 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 left: 0,
                 right: 0,
                 child: widget.child,
-              )
+              ),
+               Container(
+                child: GestureDetector(
+                  onTap: Navigator.pop(context),
+                  child: Container(
+                    child: FaIcon(
+                      FontAwesomeIcons.times,
+                      color: Colors.grey[600],
+                      size: 18.0,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
