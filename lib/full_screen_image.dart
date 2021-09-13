@@ -7,15 +7,13 @@ class FullScreenWidget extends StatelessWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel,
-      this.icon});
+      this.disposeLevel});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget icon;
-
+  
   @override
   Widget build(BuildContext context) { 
     return GestureDetector(
@@ -48,12 +46,16 @@ class FullScreenPage extends StatefulWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel = DisposeLevel.Medium});
+      this.disposeLevel = DisposeLevel.Medium,
+      this.icon,
+      this.onTap});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
+  final Widget icon;
+  final Function onTap;
 
   @override
   _FullScreenPageState createState() => _FullScreenPageState();
@@ -169,7 +171,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
               ),
                Container(
                 child: GestureDetector(
-                  onTap: Navigator.pop(context),
+                  onTap: widget.onTap,
                   child: Container(
                     child: widget.icon,
                   ),
