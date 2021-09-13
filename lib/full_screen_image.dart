@@ -177,7 +177,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
               ),
                Container(
                 child: GestureDetector(
-                  onTap: widget.onTap,
+                  onTap: () => widget.onTap,
                   child: Container(
                     child: widget.icon,
                   ),
