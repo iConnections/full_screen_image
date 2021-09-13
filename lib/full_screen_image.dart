@@ -14,7 +14,7 @@ class FullScreenWidget extends StatelessWidget {
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final IconData icon;
+  final Widget icon;
 
   @override
   Widget build(BuildContext context) { 
