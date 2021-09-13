@@ -15,8 +15,8 @@ class FullScreenWidget extends StatelessWidget {
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget icon;
-  final FUnction onTap;
+  final Widget? icon;
+  final Function onTap;
   
   @override
   Widget build(BuildContext context) { 
