@@ -8,14 +8,14 @@ class FullScreenWidget extends StatelessWidget {
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
       this.disposeLevel,
-      this.icon,
-      this.onTap});
+      required this.icon,
+      required this.onTap});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget? icon;
+  final Widget icon;
   final Function onTap;
   
   @override
