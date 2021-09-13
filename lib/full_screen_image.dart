@@ -7,12 +7,14 @@ class FullScreenWidget extends StatelessWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel});
+      this.disposeLevel,
+      required this.icon});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
+  final Widget icon;
   
   @override
   Widget build(BuildContext context) { 
@@ -46,12 +48,14 @@ class FullScreenPage extends StatefulWidget {
       {required this.child,
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
-      this.disposeLevel = DisposeLevel.Medium});
+      this.disposeLevel = DisposeLevel.Medium,
+      required this.icon});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
+  final Widget icon;
 
   @override
   _FullScreenPageState createState() => _FullScreenPageState();
@@ -163,7 +167,12 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 bottom: 0 - positionYDelta,
                 left: 0,
                 right: 0,
-                child: widget.child,
+                child: Column(
+                  children: [
+                    widget.icon,
+                  widget.child,
+                    ],
+                  ),
               ),
             ],
           ),
