@@ -33,6 +33,7 @@ class FullScreenWidget extends StatelessWidget {
                     backgroundColor: backgroundColor,
                     backgroundIsTransparent: backgroundIsTransparent,
                     disposeLevel: disposeLevel,
+                    icon: icon,
                   );
                 }));
       },
