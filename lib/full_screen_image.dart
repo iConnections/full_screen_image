@@ -38,7 +38,7 @@ class FullScreenWidget extends StatelessWidget {
                     backgroundIsTransparent: backgroundIsTransparent,
                     disposeLevel: disposeLevel,
                     backButton: backButton,
-                    backButtonOnTap: backButtonOntap,
+                    backButtonOnTap: backButtonOnTap,
                   );
                 }));
       },
