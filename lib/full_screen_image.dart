@@ -181,7 +181,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
                   widget.child,
                     GestureDetector(
                       child: widget.backButton,
-                      onTap: widget.backButtonOnTap,
+                      onTap: () => widget.backButtonOnTap,
                     ),
                     ],
                   ),
