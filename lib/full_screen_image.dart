@@ -8,8 +8,8 @@ class FullScreenWidget extends StatelessWidget {
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
       this.disposeLevel,
-       requried this.backButton,
-       this.backButtonOnTap,
+       required this.backButton,
+       required this.backButtonOnTap,
       });
 
   final Widget child;
