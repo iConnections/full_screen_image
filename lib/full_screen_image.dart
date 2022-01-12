@@ -8,13 +8,17 @@ class FullScreenWidget extends StatelessWidget {
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
       this.disposeLevel,
-      required this.icon});
+       this.backButton,
+       this.backButtonOnTap,
+      });
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
-  final Widget icon;
+  final Widget backButton;
+  final Function backButtonOnTap;
+ 
   
   @override
   Widget build(BuildContext context) { 
@@ -33,7 +37,8 @@ class FullScreenWidget extends StatelessWidget {
                     backgroundColor: backgroundColor,
                     backgroundIsTransparent: backgroundIsTransparent,
                     disposeLevel: disposeLevel,
-                    icon: icon,
+                    backButton: backButton,
+                    backButtonOnTap: backButtonOntap,
                   );
                 }));
       },
@@ -50,13 +55,17 @@ class FullScreenPage extends StatefulWidget {
       this.backgroundColor = Colors.black,
       this.backgroundIsTransparent = true,
       this.disposeLevel = DisposeLevel.Medium,
-      required this.icon});
+      required this.icon,
+      required this.backButton,
+      required this.backButtonOnTap,});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
   final Widget icon;
+  final Widget backButton;
+  final Function backButtonOnTap;
 
   @override
   _FullScreenPageState createState() => _FullScreenPageState();
@@ -171,8 +180,11 @@ class _FullScreenPageState extends State<FullScreenPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    widget.icon,
                   widget.child,
+                    GestureDetector(
+                      child: backButton,
+                      onTap: backButtonOnTap,
+                    ),
                     ],
                   ),
               ),
