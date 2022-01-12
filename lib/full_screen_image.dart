@@ -9,7 +9,6 @@ class FullScreenWidget extends StatelessWidget {
       this.backgroundIsTransparent = true,
       this.disposeLevel,
        required this.backButton,
-       required this.backButtonOnTap,
       });
 
   final Widget child;
@@ -17,7 +16,6 @@ class FullScreenWidget extends StatelessWidget {
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
   final Widget backButton;
-  final Function backButtonOnTap;
  
   
   @override
@@ -38,7 +36,6 @@ class FullScreenWidget extends StatelessWidget {
                     backgroundIsTransparent: backgroundIsTransparent,
                     disposeLevel: disposeLevel,
                     backButton: backButton,
-                    backButtonOnTap: backButtonOnTap,
                   );
                 }));
       },
@@ -56,14 +53,13 @@ class FullScreenPage extends StatefulWidget {
       this.backgroundIsTransparent = true,
       this.disposeLevel = DisposeLevel.Medium,
       required this.backButton,
-      required this.backButtonOnTap,});
+});
 
   final Widget child;
   final Color backgroundColor;
   final bool backgroundIsTransparent;
   final DisposeLevel? disposeLevel;
   final Widget backButton;
-  final Function backButtonOnTap;
 
   @override
   _FullScreenPageState createState() => _FullScreenPageState();
@@ -179,10 +175,7 @@ class _FullScreenPageState extends State<FullScreenPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                   widget.child,
-                    GestureDetector(
-                      child: widget.backButton,
-                      onTap: () => widget.backButtonOnTap,
-                    ),
+               widget.backButton,
                     ],
                   ),
               ),
